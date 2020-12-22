@@ -13,11 +13,11 @@ gem 'sass-rails', '>= 6'
 gem 'uglifier'
 gem 'webpacker', '~> 4.0'
 
+group :production do
+  gem 'pg'
+end
+
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
   gem 'pry-rails'
-end
-
-group :production do
-  gem 'pg'
 end
