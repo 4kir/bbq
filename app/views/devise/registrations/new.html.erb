@@ -2,8 +2,15 @@
   <div class="col-md-6">
     <h2><%= t('devise.registrations.new.sign_up') %></h2>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="alert alert-warning alert-dismissible" aria-hidden="true" role="alert">
+  <button type="button" class="close" data-dismiss="alert">
+    <span aria-hidden="true">&times;</span>
+    <span class="sr-only">Close</span>
+  </button>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
+</div>
+    
 
       <div class="field">
         <%= f.label :Имя %><br />
