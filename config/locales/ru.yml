@@ -5,7 +5,6 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
-
     # Перевод атрибутов моделей
     attributes:
       user:
@@ -26,11 +25,9 @@ ru:
       destroyed: 'Вы удалили мероприятие :('
     users:
       updated: 'Вы обновили свой профиль'
-
   app:
     name: 'Шашлыки'
-    company: 'Хороший программист'
-
+    company: 'Хорошая компания'
   activerecord:
     attributes:
       user:
