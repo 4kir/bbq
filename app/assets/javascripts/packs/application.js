@@ -4,7 +4,7 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
-import 'bootstrap/dist/js/bootstrap'
+// import 'bootstrap/dist/js/bootstrap'
 
 require("@rails/activestorage").start()
 require("channels")
