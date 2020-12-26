@@ -1,4 +1,6 @@
 <% if resource.errors.any? %>
+
+  <div class="alert alert-warning" role="alert">
     <h4>
       <%= I18n.t("errors.messages.not_saved",
                  count: resource.errors.count,
@@ -10,4 +12,6 @@
         <li><%= message %></li>
       <% end %>
     </ul>
+  </div>
+
 <% end %>

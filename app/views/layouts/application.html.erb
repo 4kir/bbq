@@ -16,7 +16,7 @@
 </head>
 <body>
 
-  <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+  <nav id="navbar-example2" class="navbar navbar-light bg-light px-3 border-bottom border-2 buffer-bottom">
     <div class="container">
       <%= link_to t('app.name'), root_path, class: 'navbar-brand' %>
       <ul class="nav nav-pills">
@@ -45,7 +45,7 @@
 
     <footer>
       <%# Для вывода названия компании используем хелпер I18n.t %>
-      <p>&copy; <%= t 'app.company' %> 2020</p>
+      <p class="buffer-top">&copy; <%= t 'app.company' %> 2020</p>
     </footer>
   </div>
 
