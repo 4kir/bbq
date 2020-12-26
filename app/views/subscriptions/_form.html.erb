@@ -4,21 +4,20 @@
     <% unless user_signed_in? %>
         <div class="form-group">
           <%= f.label :user_name %>
-          <%= f.text_field :user_name, class: 'form-control' %>
+          <%= f.text_field :user_name, class: 'form-control buffer-bottom' %>
         </div>
 
         <div class="form-group">
           <%= f.label :user_email %>
-          <%= f.text_field :user_email, class: 'form-control' %>
+          <%= f.text_field :user_email, class: 'form-control buffer-bottom' %>
         </div>
     <% end %>
 
     <% if @event.user != current_user %>
       <h4>Я пойду:</h4>
       <div class="actions">
-        <%= f.submit 'Подписаться', class: 'btn btn-primary' %>
+        <%= f.submit t('viewes.subscribe'), class: 'btn btn-primary' %>
       </div>
     <% end %>
 
 <% end %>
-

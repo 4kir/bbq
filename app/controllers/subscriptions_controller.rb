@@ -1,9 +1,7 @@
 class SubscriptionsController < ApplicationController
- before_action :set_event, only: [:create, :destroy]
-
+  before_action :set_event, only: [:create, :destroy]
   # Задаем подписку, которую юзер хочет удалить
   before_action :set_subscription, only: [:destroy]
-
 
   def create
     # Болванка для новой подписки

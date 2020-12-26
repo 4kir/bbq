@@ -18,6 +18,12 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+      comment:
+        body: 'Текст'
+        user_name: 'Имя пользователя'
+      subscription:
+        user_name: 'Имя пользователя'
+        user_email: 'Email пользователя'
 
   # Перевод сообщений, которые отправляет контроллер
   controllers:
@@ -67,6 +73,8 @@ ru:
     profile_editing: 'Редактирование профиля'
     profile_edit: 'Редактировать профиль'
     password_change: 'Сменить пароль'
+    send: 'Отправить'
+    subscribe: 'Подписаться'
 
   comments:
     comment:
@@ -75,4 +83,3 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
-      

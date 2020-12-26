@@ -3,17 +3,17 @@
 
     <div class="form-group">
       <%= f.label :body %>
-      <%= f.text_area :body, class: 'form-control' %>
+      <%= f.text_area :body, class: 'form-control buffer-bottom' %>
     </div>
 
     <% unless user_signed_in? %>
         <div class="form-group">
           <%= f.label :user_name %>
-          <%= f.text_field :user_name, class: 'form-control' %>
+          <%= f.text_field :user_name, class: 'form-control buffer-bottom' %>
         </div>
     <% end %>
 
     <div class="actions">
-      <%= f.submit 'Отправить', class: 'btn btn-primary' %>
+      <%= f.submit t('viewes.send'), class: 'btn btn-primary' %>
     </div>
 <% end %>
