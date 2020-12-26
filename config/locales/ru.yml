@@ -35,7 +35,26 @@ ru:
 
   event_errors:
     messages:
-        few: "В вашей форме %{count} ошибки:"
-        many: "В вашей форме %{count} ошибок:"
-        one: "В вашей форме %{count} ошибка:"
-        other: "В вашей форме %{count} ошибки:"
+        few: 'В вашей форме %{count} ошибки:'
+        many: 'В вашей форме %{count} ошибок:'
+        one: 'В вашей форме %{count} ошибка:'
+        other: 'В вашей форме %{count} ошибки:'
+
+  viewes:
+    are_you_sure: 'Точно удалить событие?'
+    delete: 'Удалить'
+    edit: 'Изменить'
+    save: 'Сохранить'
+    back: 'вернуться'
+    log_out: 'Выйти'
+    registration: 'Зарегистрироваться'
+    sign_in: 'Войти'
+    events: 'События'
+    event_editing: 'Редактирование события'
+    event_create: 'Создать событие'
+    event_created: 'Организовал:'
+    event_not_created: 'Пользователь пока не организовал ни одного события'
+    profile: 'Профиль'
+    profile_editing: 'Редактирование профиля'
+    profile_edit: 'Редактировать профиль'
+    password_change: 'Сменить пароль'

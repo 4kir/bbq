@@ -19,13 +19,13 @@
 
           <% if current_user_can_edit?(@event) %>
             <div class="buffer-both">
-              <%= link_to 'Изменить', edit_event_path(@event),
+              <%= link_to t('viewes.edit'), edit_event_path(@event),
                 class: 'btn btn-primary' %>
             </div>
 
             <div class="buffer-both">
-              <%= link_to 'Удалить', event_path(@event),
-                          method: :delete, data: {confirm: 'Точно удалить собы?'}, class: 'btn btn-primary' %>
+              <%= link_to t('viewes.delete'), event_path(@event),
+                          method: :delete, data: {confirm: t('viewes.are_you_sure')}, class: 'btn btn-danger' %>
             </div>
           <% end %>
         </div>
