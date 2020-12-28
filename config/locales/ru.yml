@@ -5,6 +5,7 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      photo: 'Фотография'
       error:
         present_user_cant_subscribe: ' не можете подписаться на свое событие'
         present_email_cant_subscribe: 'уже зарегистрирован'
@@ -14,6 +15,7 @@ ru:
       user:
         email: 'Email'
         name: 'Имя'
+        avatar: 'Аватарка'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
       event:
@@ -28,6 +30,8 @@ ru:
         user_name: 'Имя пользователя'
         user_email: 'Email пользователя'
         user: 'Пользователь'
+      photo:
+        photo: 'Фотография'
 
   # Перевод сообщений, которые отправляет контроллер
   controllers:
@@ -45,6 +49,10 @@ ru:
       created: 'Вы подписаны на это событие'
       destroyed: 'Участник отписан'
       error: 'Подписка/отписка не сработала'
+    photos:
+      error: 'Что-то не так с фоткой'
+      created: 'Вы добавили фотографию к событию'
+      destroyed: 'Вы удалили фотку'
 
   # Перевод названия приложения и компании-разработчика
   app:
@@ -83,6 +91,7 @@ ru:
     i_will_go: 'Я пойду:'
     who_calling: 'Зовет:'
     else: 'или'
+    upload: 'Загрузить'
 
   comments:
     comment:
