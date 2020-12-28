@@ -49,11 +49,12 @@ class EventsController < ApplicationController
     redirect_to events_url, notice: I18n.t('controllers.events.destroyed')
   end
 
-private
+  private
 
   def set_current_user_event
-  @event = current_user.events.find(params[:id])
+    @event = current_user.events.find(params[:id])
   end
+  
   # Use callbacks to share common setup or constraints between actions.
   def set_event
     @event = Event.find(params[:id])
