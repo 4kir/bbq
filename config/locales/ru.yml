@@ -5,6 +5,9 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      error:
+        present_user_cant_subscribe: ' не можете подписаться на свое событие'
+        present_email_cant_subscribe: 'уже зарегистрирован'
 
     # Перевод названий аттрибутов моделей
     attributes:
@@ -24,6 +27,7 @@ ru:
       subscription:
         user_name: 'Имя пользователя'
         user_email: 'Email пользователя'
+        user: 'Пользователь'
 
   # Перевод сообщений, которые отправляет контроллер
   controllers:
@@ -75,6 +79,10 @@ ru:
     password_change: 'Сменить пароль'
     send: 'Отправить'
     subscribe: 'Подписаться'
+    who_will_come: 'Пойдут:'
+    i_will_go: 'Я пойду:'
+    who_calling: 'Зовет:'
+    else: 'или'
 
   comments:
     comment:

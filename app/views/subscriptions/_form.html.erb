@@ -14,7 +14,7 @@
     <% end %>
 
     <% if @event.user != current_user %>
-      <h4>Я пойду:</h4>
+      <h4><%= t('viewes.i_will_go')%></h4>
       <div class="actions">
         <%= f.submit t('viewes.subscribe'), class: 'btn btn-primary' %>
       </div>

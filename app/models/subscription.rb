@@ -7,13 +7,15 @@ class Subscription < ApplicationRecord
   # проверки выполняются только если user не задан (незареганные приглашенные)
   validates :user_name, presence: true, unless: -> { user.present? }
   validates :user_email, presence: true, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/, unless: -> { user.present? }
-  validates :user_email, uniqueness: true
 
   # для данного event_id один юзер может подписаться только один раз (если юзер задан)
   validates :user, uniqueness: {scope: :event_id}, if: -> { user.present? }
 
   # для данного event_id один email может использоваться только один раз (если нет юзера, анонимная подписка)
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
+
+  validate :present_user_cant_subscribe
+  validate :present_email_cant_subscribe
 
   # переопределяем метод, если есть юзер, выдаем его имя,
   # если нет -- дергаем исходный переопределенный метод
@@ -32,6 +34,18 @@ class Subscription < ApplicationRecord
       user.email
     else
       super
+    end
+  end
+
+  def present_user_cant_subscribe
+    if event.user == user
+      errors.add(:user, I18n.t('activerecord.models.error.present_user_cant_subscribe'))
+    end
+  end
+
+  def present_email_cant_subscribe
+    if User.exists?(email: user_email)
+      errors.add(:user_email, I18n.t('activerecord.models.error.present_email_cant_subscribe'))
     end
   end
 end
