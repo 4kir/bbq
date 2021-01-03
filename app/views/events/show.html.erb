@@ -26,7 +26,8 @@
 
             <div class="buffer-both">
               <%= link_to t('viewes.delete'), event_path(@event),
-                          method: :delete, data: {confirm: t('viewes.are_you_sure')}, class: 'btn btn-danger' %>
+                          method: :delete, data: {confirm: t('viewes.are_you_sure')},
+                            class: 'btn btn-danger' %>
             </div>
           <% end %>
         </div>
@@ -35,6 +36,7 @@
   </div>
   <div class="row">
     <div class="col-md-8">
+
       <div class="event-photos">
         <%# Выводим все фотографии события %>
         <div class="event-photos-gallery">
@@ -63,6 +65,7 @@
         <h4><%= t('viewes.who_calling')%></h4>
         <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
+
       <div class="event-subscriptions">
         <h4><%= t('viewes.who_will_come')%></h4>
         <div>
@@ -72,12 +75,14 @@
           </p>
         </div>
       </div>
+
       <div class="event-subscription-form">
         <div>
           <%= render partial: 'subscriptions/form', locals: {
             subscription: @new_subscription || @event.subscriptions.build
           } %>
         </div>
+
       </div>
     </div>
   </div>

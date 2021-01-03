@@ -98,6 +98,8 @@ ru:
     who_calling: 'Зовет:'
     else: 'или'
     upload: 'Загрузить'
+    profile_destroy_confirm: 'Вы уверены, что хотите удалить профиль?'
+    photo_add: 'Добавил'
 
   comments:
     comment:
