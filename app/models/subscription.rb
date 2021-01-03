@@ -39,14 +39,14 @@ class Subscription < ApplicationRecord
 
   def present_user_cant_subscribe
     if event.user == user
-      errors.add(:user, I18n.t('activerecord.models.error.present_user_cant_subscribe'))
+      errors.add(:user, :subscribe_to_yourself)
     end
   end
 
   def present_email_cant_subscribe
     unless user.present?
       if User.exists?(email: user_email)
-        errors.add(:user_email, I18n.t('activerecord.models.error.present_email_cant_subscribe'))
+        errors.add(:user_email, :present_email_cant_subscribe)
       end
     end
   end

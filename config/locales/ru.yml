@@ -6,9 +6,6 @@ ru:
       user: 'Пользователь'
       event: 'Событие'
       photo: 'Фотография'
-      error:
-        present_user_cant_subscribe: ' не можете подписаться на свое событие'
-        present_email_cant_subscribe: 'уже зарегистрирован'
 
     # Перевод названий аттрибутов моделей
     attributes:
@@ -32,6 +29,15 @@ ru:
         user: 'Пользователь'
       photo:
         photo: 'Фотография'
+
+    errors:
+      models:
+        subscription:
+          attributes:
+            user:
+              subscribe_to_yourself: ' не можете подписаться на свое событие'
+            user_email:
+              present_email_cant_subscribe: 'уже зарегистрирован'
 
   # Перевод сообщений, которые отправляет контроллер
   controllers:
