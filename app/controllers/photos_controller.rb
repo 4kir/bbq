@@ -12,6 +12,9 @@ class PhotosController < ApplicationController
     @new_photo.user = current_user
 
     if @new_photo.save
+      # уведомляем всех подписчиков о новом комментарии
+      notify_subscribers(@event, @new_photo)
+
       # Если фотка сохранилась, редиректим на событие с сообщением
       redirect_to @event, notice: I18n.t('controllers.photos.created')
     else
@@ -37,6 +40,18 @@ class PhotosController < ApplicationController
   end
 
   private
+
+  def notify_subscribers(event, photo)
+    # Собираем всех подписчиков и автора события в массив мэйлов, исключаем повторяющиеся
+    all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq - [photo.user.email]
+
+    # По адресам из этого массива делаем рассылку
+    # Как и в подписках, берём EventMailer и его метод comment с параметрами
+    # И отсылаем в том же потоке
+    all_emails.each do |mail|
+      EventMailer.photo(event, photo, mail).deliver_now
+    end
+  end
 
   # Так как фотография — вложенный ресурс, в params[:event_id] рельсы
   # автоматически положат id события, которому принадлежит фотография

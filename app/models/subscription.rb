@@ -15,7 +15,7 @@ class Subscription < ApplicationRecord
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
 
   validate :present_user_cant_subscribe
-  validate :present_email_cant_subscribe
+  validate :present_email_cant_subscribe, unless: -> { user.present? }
 
   # переопределяем метод, если есть юзер, выдаем его имя,
   # если нет -- дергаем исходный переопределенный метод
@@ -44,10 +44,8 @@ class Subscription < ApplicationRecord
   end
 
   def present_email_cant_subscribe
-    unless user.present?
-      if User.exists?(email: user_email)
-        errors.add(:user_email, :present_email_cant_subscribe)
-      end
+    if User.exists?(email: user_email)
+      errors.add(:user_email, :present_email_cant_subscribe)
     end
   end
 end
