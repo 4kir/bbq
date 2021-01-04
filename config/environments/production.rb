@@ -123,14 +123,23 @@ Rails.application.configure do
   # отправка почты по протоколу SMTP
   config.action_mailer.delivery_method = :smtp
 
-  # Настройки для Sendgrid
-  ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.sendgrid.net',
-    :port           => '587',
-    :authentication => :plain,
-    :user_name      => ENV['SENDGRID_USERNAME'],
-    :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => 'heroku.com',
-    :enable_starttls_auto => true
-  }
+  # # Настройки для Sendgrid
+  # ActionMailer::Base.smtp_settings = {
+  #   :address        => 'smtp.sendgrid.net',
+  #   :port           => '587',
+  #   :authentication => :plain,
+  #   :user_name      => ENV['SENDGRID_USERNAME'],
+  #   :password       => ENV['SENDGRID_PASSWORD'],
+  #   :domain         => 'heroku.com',
+  #   :enable_starttls_auto => true
+  # }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :user_name => 'ae1742c7733f1e',
+  :password => 'd22d328218071d',
+  :address => 'smtp.mailtrap.io',
+  :domain => 'smtp.mailtrap.io',
+  :port => '2525',
+  :authentication => :cram_md5
+}
 end
