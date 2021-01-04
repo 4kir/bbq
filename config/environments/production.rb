@@ -133,13 +133,13 @@ Rails.application.configure do
   #   :domain         => 'heroku.com',
   #   :enable_starttls_auto => true
   # }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-  :user_name => 'ae1742c7733f1e',
-  :password => 'd22d328218071d',
-  :address => 'smtp.mailtrap.io',
-  :domain => 'smtp.mailtrap.io',
-  :port => '2525',
-  :authentication => :cram_md5
-}
+  ActionMailer::Base.smtp_settings = {
+    :user_name => ENV['MAILJET_USERNAME'],
+    :password => ENV['MAILJET_PASSWORD'],
+    :domain => 'heroku.com',
+    :address => 'in-v3.mailjet.com',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
 end
