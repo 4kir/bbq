@@ -100,6 +100,10 @@ ru:
     upload: 'Загрузить'
     profile_destroy_confirm: 'Вы уверены, что хотите удалить профиль?'
     photo_add: 'Добавил'
+    min_password_length:
+      one: "%{count} символ минимум"
+      few: "%{count} символа минимум"
+      many: "%{count} символов минимум"
 
   comments:
     comment:
@@ -124,3 +128,28 @@ ru:
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
+
+  event_mailer:
+    comment:
+      subject: "Новый комментарий @ %{title}"
+      title: Новый комментарий
+      author: Автор
+      event: Событие
+      datetime: Дата события
+      owner: Организатор
+    subscription:
+      subject: "Новая подписка @ %{title}"
+      title: Новая подписка
+      name: Имя
+      email: Email
+      author: Автор
+      event: Событие
+      datetime: Дата события
+      owner: Организатор
+    photo:
+      subject: "Новая фотография @ %{title}"
+      title: Новая фотография
+      author: Автор
+      event: Событие
+      datetime: Дата события
+      owner: Организатор

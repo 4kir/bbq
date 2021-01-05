@@ -19,7 +19,7 @@
       <div class="field">
         <%= f.label :password %>
         <% if @minimum_password_length %>
-        <em>(минимум <%= @minimum_password_length %> символов)</em>
+        <em>(<%= t('viewes.min_password_length', count: @minimum_password_length) %>)</em>
         <% end %>
         <%= f.password_field :password, autocomplete: "new-password", class: "form-control buffer-bottom" %>
       </div>

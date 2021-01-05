@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-    # Событие принадлежит юзеру
+  # Событие принадлежит юзеру
   belongs_to :user
 
   has_many :comments

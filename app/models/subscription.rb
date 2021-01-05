@@ -37,6 +37,8 @@ class Subscription < ApplicationRecord
     end
   end
 
+  private
+
   def present_user_cant_subscribe
     if event.user == user
       errors.add(:user, :subscribe_to_yourself)
