@@ -20,6 +20,7 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+        pincode: 'Пинкод доступа'
       comment:
         body: 'Текст'
         user_name: 'Имя пользователя'
@@ -45,6 +46,8 @@ ru:
       created: 'Вы создали новое мероприятие'
       updated: 'Вы обновили мероприятие'
       destroyed: 'Вы удалили мероприятие :('
+      pincode: 'Пинкод доступа'
+      wrong_pincode: 'Неверный пинкод!'
     users:
       updated: 'Вы обновили свой профиль'
     comments:
@@ -74,11 +77,12 @@ ru:
 
 
   viewes:
+    access_by_pin_code: 'Доступ только по пин-коду'
     are_you_sure: 'Точно удалить событие?'
     delete: 'Удалить'
     edit: 'Изменить'
     save: 'Сохранить'
-    back: 'вернуться'
+    back: 'Вернуться'
     log_out: 'Выйти'
     registration: 'Зарегистрироваться'
     sign_in: 'Войти'
@@ -100,6 +104,7 @@ ru:
     upload: 'Загрузить'
     profile_destroy_confirm: 'Вы уверены, что хотите удалить профиль?'
     photo_add: 'Добавил'
+    pincode: 'Пинкод доступа'
     min_password_length:
       one: "%{count} символ минимум"
       few: "%{count} символа минимум"
@@ -108,6 +113,10 @@ ru:
   comments:
     comment:
       destroy_confirm: 'Вы уверены, что хотите удалить этот комменатрий?'
+
+  photos:
+    photo:
+      destroy_confirm: 'Вы уверены, что хотите удалить это фото?'
 
   subscriptions:
     subscription:
