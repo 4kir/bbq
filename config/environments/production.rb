@@ -121,7 +121,7 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
 
   # отправка почты по протоколу SMTP
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :mailjet
 
   # # Настройки для Sendgrid
   # ActionMailer::Base.smtp_settings = {
@@ -133,13 +133,13 @@ Rails.application.configure do
   #   :domain         => 'heroku.com',
   #   :enable_starttls_auto => true
   # }
-  ActionMailer::Base.smtp_settings = {
-    :user_name => ENV['MAILJET_USERNAME'],
-    :password => ENV['MAILJET_PASSWORD'],
-    :domain => 'heroku.com',
-    :address => 'in-v3.mailjet.com',
-    :port => 587,
-    :authentication => :plain,
-    :enable_starttls_auto => true
-  }
+  # ActionMailer::Base.smtp_settings = {
+  #   :user_name => ENV['MAILJET_USERNAME'],
+  #   :password => ENV['MAILJET_PASSWORD'],
+  #   :domain => 'heroku.com',
+  #   :address => 'in-v3.mailjet.com',
+  #   :port => 587,
+  #   :authentication => :plain,
+  #   :enable_starttls_auto => true
+  # }
 end
