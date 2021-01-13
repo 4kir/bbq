@@ -11,12 +11,12 @@ gem 'rails-i18n'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
+gem 'mailjet'
 gem 'figaro'
 gem 'bootstrap', '~> 5.0.0.alpha3'
 gem 'sass-rails', '>= 6'
 gem 'uglifier'
 gem 'webpacker', '~> 4.0'
-
 
 group :production do
   gem 'pg'
