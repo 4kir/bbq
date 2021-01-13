@@ -17,6 +17,7 @@ gem 'sass-rails', '>= 6'
 gem 'uglifier'
 gem 'webpacker', '~> 4.0'
 
+
 group :production do
   gem 'pg'
 end
