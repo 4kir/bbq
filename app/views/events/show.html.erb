@@ -1,11 +1,9 @@
 <div class="event">
   <div class="event-info row">
     <div class="col-md-8 relative">
-        <%= content_tag 'div', '',
-          class: 'event-background',
-          style: "background-image: url(#{event_photo(@event)})" %> 
-
       <div class="event-info-inner row buffer-bottom">
+        <%= content_tag 'div', '', class: 'event-background',
+          style: "background-image: url(#{event_photo(@event)})" %> 
         <div class="col-md-6">
           <div class="event-description">
             <h1><%= @event.title %></h1>
