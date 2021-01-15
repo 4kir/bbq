@@ -120,6 +120,8 @@ GEM
       mini_magick (>= 4.9.5, < 5)
       ruby-vips (>= 2.0.17, < 3)
     ipaddress (0.8.3)
+    lightbox2-rails (2.8.2.1)
+      railties (>= 3.1)
     loofah (2.8.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -251,6 +253,7 @@ DEPENDENCIES
   devise-i18n
   figaro
   fog-aws
+  lightbox2-rails
   mailjet
   pg
   pry-rails
