@@ -5,7 +5,7 @@
         <%= content_tag 'div', '', class: 'event-background',
           style: "background-image: url(#{event_photo(@event)})" %> 
         <div class="col-md-6">
-          <div class="event-description">
+          <div class="event-description buffer-both">
             <h1><%= @event.title %></h1>
             <%# Для перевода времени в русский формат используем I18n %>
             <%# Формат при этом используется из гема russian %>

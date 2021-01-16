@@ -3,7 +3,7 @@
   <% image_title = " #{t('viewes.photo_add')} #{render partial: 'users/user', object: photo.user} " %>
 
   <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, data: {
-      lightbox: "modal", title: image_title, gallery: "img-gsdsds  allery"
+      lightbox: "lightbox", title: image_title, gallery: "img-gallery"
   } %>
 
    <% if current_user_can_edit?(photo) %>
