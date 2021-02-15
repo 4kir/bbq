@@ -112,14 +112,14 @@ Rails.application.configure do
 
   # Базовый урл сайта, для генерации правильных ссылок в письмах
   # ПРОПИСЫВАЙТЕ свой!
-  config.action_mailer.default_url_options = {host: 'time-to-bbq.herokuapp.com'}
+  config.action_mailer.default_url_options = {host: 'na-shashlyki.ru'}
 
   # Вываливать ли посетителю сайта ошибки при отправке писем
-  config.action_mailer.raise_delivery_errors = false
+  # config.action_mailer.raise_delivery_errors = false
 
   # Делать рассылку писем (если false — мэйлер только имитирует работу, реальных писем не уходит)
   config.action_mailer.perform_deliveries = true
 
   # отправка почты по протоколу SMTP
-  config.action_mailer.delivery_method = :mailjet
+  config.action_mailer.delivery_method = :sendmail
 end

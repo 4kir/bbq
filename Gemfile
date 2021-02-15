@@ -18,6 +18,8 @@ gem 'sass-rails', '>= 6'
 gem 'uglifier'
 gem 'webpacker', '~> 4.0'
 gem 'lightbox2-rails'
+gem 'ed25519', '>= 1.2', '< 2.0'
+gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
 
 group :production do
   gem 'pg'
@@ -26,4 +28,9 @@ end
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
   gem 'pry-rails'
+  gem 'capistrano', '~> 3.10'
+  gem 'capistrano-rails', '~> 1.6'
+  gem 'capistrano-passenger', '~> 0.2'
+  gem 'capistrano-rbenv', '~> 2.1'
+  gem 'capistrano-bundler', '~> 1.2'
 end
