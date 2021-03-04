@@ -19,6 +19,7 @@ set :deploy_to, "/home/deploy/www/na-shashlyki"
 
 # Default value for :pty is false
 # set :pty, true
+after 'deploy:restart', 'resque:restart'
 
 # Default value for :linked_files is []
 append :linked_files, "config/database.yml", "config/secrets.yml"

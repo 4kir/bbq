@@ -10,7 +10,7 @@ class SubscriptionsController < ApplicationController
 
     if @new_subscription.save
       # Если сохранилась успешно, редирект на страницу самого события
-      EventMailer.subscription(@event, @new_subscription).deliver_now
+      SendMailJob.perform_later(@new_subscription)
 
       redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
     else
