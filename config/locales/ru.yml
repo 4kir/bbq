@@ -84,8 +84,13 @@ ru:
     save: 'Сохранить'
     back: 'Вернуться'
     log_out: 'Выйти'
+    didnt_receive_confirmation_instructions: Не получили инструкции подтверждения?
+    didnt_receive_unlock_instructions: Не получили инструкции разблокирования?
     registration: 'Зарегистрироваться'
     sign_in: 'Войти'
+    sign_in_with: Войти с помощью
+    sign_up: Регистрация
+    forgot_your_password: Забыли пароль?
     events: 'События'
     event_editing: 'Редактирование события'
     event_create: 'Создать событие'
