@@ -32,7 +32,20 @@ development:
   MAILJET_API_KEY: sfddfdsf6sdf7sdf89a8sdsa
   MAILJET_SECRET_KEY: sdkfdskjfksjh3kjhkjhk3kjhk
 ```
-5. Находясь в папке приложения выполните команду в терминале `bundle && bundle exec rails db:migrate`
-6. Выполните команду `yarn`
-7. Запустить в терминале `bin/webpack-dev-server` и во втором окне терминала `bundle exec rails s`
+5. Находясь в папке приложения выполните команду в терминале 
+```
+bundle && bundle exec rails db:migrate
+```
+6. Выполните команду
+```
+yarn
+```
+7. Запустить в терминале 
+```
+bin/webpack-dev-server
+```
+и во втором окне терминала
+```
+bundle exec rails s
+```
 8. Открыть в браузере http://localhost:3000/
